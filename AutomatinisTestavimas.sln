@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutTest1103", "automatinis_testavimas\AutTest1103.csproj", "{A479F9AD-4E3C-4D4C-A910-C48E53CD0D77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "uzd_ND2", "uzd_ND2\uzd_ND2.csproj", "{FE1A6B94-A594-4FD0-9E10-C64A5C332A1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A479F9AD-4E3C-4D4C-A910-C48E53CD0D77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A479F9AD-4E3C-4D4C-A910-C48E53CD0D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A479F9AD-4E3C-4D4C-A910-C48E53CD0D77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A479F9AD-4E3C-4D4C-A910-C48E53CD0D77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE1A6B94-A594-4FD0-9E10-C64A5C332A1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE1A6B94-A594-4FD0-9E10-C64A5C332A1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE1A6B94-A594-4FD0-9E10-C64A5C332A1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE1A6B94-A594-4FD0-9E10-C64A5C332A1A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {538073A9-2968-4FB5-B90D-D1163892E0D4}
+	EndGlobalSection
+EndGlobal

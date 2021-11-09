@@ -1,0 +1,36 @@
+1. Ar rankiniam testavime
+mokysimes testuoti tik puslapius ir ju 
+komponentus ar ir kokias nors programas/aplikacijas
+2. Reikalavimu tipai - virsutinis melynas paveiksliukas
+4. Funkcinis testavimas - paveikslelis, ar bus paaiskinti
+terminai? (unit testing/integration testing)
+5. Sistemine iranga vs aplikacine iranga
+6. Plačiau apie testavimo aplinka? (Pvz?) Framework? Programos 
+kuriose testuojama?
+7. Test Exit criteria - Workaround 
+skirtumas nuo pilno ištaisymo?
+
+
+Vartutechnika.lt
+
+1. Ar testuojant funkcija kaip
+pvz siuo atveju kalkuliacija buna zinomi standartiniai
+ismatavimai?
+2. Kiek scenariju turi buti/kaip juos rasyti? Koks
+skirtumas nuo atvejo?
+3. Papildomi variantai - rasymas su tasku po skaiciaus,
+skaiciai su simboliais - ar per detalu/ ar reiktu iterpti?
+Kaip zinoti kokie atvejai svarbus o kurie maziau? Ar
+rasyti viska ka imanoma sugalvoti? Ar problema, jei koks
+atvejis nesugalvojamas? Pagal ka zinot kokie atvejai
+privalo buti?
+4. Excelio isplanavimas - ar pries testa
+buna zinomi jau reikalingi kriterijai kaip 
+expected results, status, out of scope?
+5. Ar reik bandyti atvejus labiau atsizvelgiant i
+kokius veiksmus zmogus darytu, o retesniu atveju ne-
+bandyti, ar geriau isbandyti viska kas imanoma?
+6. Duomenys - kiekvienus duomenis rasyti i atskira
+TC? Pvz simboliai, rasyti kiekviena atskira simboli
+i test case ar pabandyti koki viena simboli ir
+traktuoti kaip bendra simboliu TC?
