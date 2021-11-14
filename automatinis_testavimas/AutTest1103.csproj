@@ -55,6 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="page\BasePage.cs" />
     <Compile Include="page\CheckBoxDemoPage.cs" />
     <Compile Include="page\ND3SeleniumCheckBoxPage.cs" />
@@ -65,6 +66,12 @@
     <Compile Include="test\ND3SeleniumCheckBoxTest.cs" />
     <Compile Include="test\ND4SelectDropDownDemoTest.cs" />
     <Compile Include="test\SelectDropDownDemoTest.cs" />
+=======
+    <Compile Include="page\ND3SeleniumCheckBoxPage.cs" />
+    <Compile Include="page\SeleniumInputPage.cs" />
+    <Compile Include="page\VartuTechnikaPage.cs" />
+    <Compile Include="test\ND3SeleniumCheckBoxTest.cs" />
+>>>>>>> 6f704bd38246ff106041c9dec4579c65f184200f
     <Compile Include="test\SeleniumInputTest.cs" />
     <Compile Include="test\VartuTechnikaTest.cs" />
     <Compile Include="VartuTechnika.cs" />
