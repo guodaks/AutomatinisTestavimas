@@ -55,15 +55,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="baig page\ParduotuvePegasasPegasoKolekcijosKnygosPage.cs" />
     <Compile Include="baig page\ParduotuvePegasasCustomerInfoPage.cs" />
     <Compile Include="Drivers\Browsers.cs" />
     <Compile Include="Drivers\CustomDriver.cs" />
     <Compile Include="baig page\ParduotuvePegasasHomePage.cs" />
+=======
+<<<<<<< HEAD
+>>>>>>> 703b65eec8ca97e418745be9c5780a0c61854c67
     <Compile Include="page\BasePage.cs" />
     <Compile Include="page\CheckBoxDemoPage.cs" />
     <Compile Include="page\ND3SeleniumCheckBoxPage.cs" />
     <Compile Include="page\ND4SelectDropDownDemoPage.cs" />
+<<<<<<< HEAD
     <Compile Include="baig page\ParduotuvePegasasLogInPage.cs" />
     <Compile Include="page\SelectDropDownDemoPage.cs" />
     <Compile Include="page\SeleniumInputPage.cs" />
@@ -76,6 +81,22 @@
     <Compile Include="test\SeleniumInputTest.cs" />
     <Compile Include="test\VartuTechnikaTest.cs" />
     <Compile Include="Tools\MyScreenShot.cs" />
+=======
+    <Compile Include="page\SelectDropDownDemoPage.cs" />
+    <Compile Include="page\SeleniumInputPage.cs" />
+    <Compile Include="page\VartuTechnikaPage.cs" />
+    <Compile Include="test\ND3SeleniumCheckBoxTest.cs" />
+    <Compile Include="test\ND4SelectDropDownDemoTest.cs" />
+    <Compile Include="test\SelectDropDownDemoTest.cs" />
+=======
+    <Compile Include="page\ND3SeleniumCheckBoxPage.cs" />
+    <Compile Include="page\SeleniumInputPage.cs" />
+    <Compile Include="page\VartuTechnikaPage.cs" />
+    <Compile Include="test\ND3SeleniumCheckBoxTest.cs" />
+>>>>>>> 6f704bd38246ff106041c9dec4579c65f184200f
+    <Compile Include="test\SeleniumInputTest.cs" />
+    <Compile Include="test\VartuTechnikaTest.cs" />
+>>>>>>> 703b65eec8ca97e418745be9c5780a0c61854c67
     <Compile Include="VartuTechnika.cs" />
     <Compile Include="ND1.cs" />
     <Compile Include="TestWebDriver.cs" />
