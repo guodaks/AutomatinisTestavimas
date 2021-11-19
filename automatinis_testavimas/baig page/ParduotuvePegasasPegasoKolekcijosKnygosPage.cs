@@ -14,13 +14,8 @@ namespace automatinis_testavimas.baig_page
     {
         private const string PageAddress = "https://www.pegasas.lt/pegaso-kolekcijos-knygos.html";
         //private const string ResultText = "";
-<<<<<<< HEAD
         //private IWebElement _bookName => Driver.FindElement(By.CssSelector(".product-item-name"));
         private IReadOnlyCollection<IWebElement> _bookName => Driver.FindElements(By.CssSelector(".product-item-name"));
-=======
-        private IWebElement _bookName => Driver.FindElement(By.CssSelector(".product-item-name"));
-        //private IReadOnlyCollection<IWebElement> _bookName => Driver.FindElements(By.CssSelector(".product-item-name"));
->>>>>>> 2d143fe9a56137021fd918232f38eb466da6c2ef
         public ParduotuvePegasasPegasoKolekcijosKnygosPage(IWebDriver webdriver) : base(webdriver)
         {       }
         public ParduotuvePegasasPegasoKolekcijosKnygosPage NavigateToDefaultPage()
@@ -34,7 +29,6 @@ namespace automatinis_testavimas.baig_page
         public ParduotuvePegasasPegasoKolekcijosKnygosPage VerifyBookIsDisplayed(string bookName)
         {
             Actions action = new Actions(Driver);
-<<<<<<< HEAD
 
             foreach (IWebElement book in _bookName)
             {
@@ -45,15 +39,6 @@ namespace automatinis_testavimas.baig_page
                 }
                 Assert.IsTrue(foundBook.Text.ToUpper().Contains(bookName.ToUpper()), $"Book is not displayed or the book title is {foundBook.Text} instead of {bookName}");
             }
-=======
-            IWebElement foundBook = null;
-            while (_bookName.Text.ToUpper().Contains(bookName.ToUpper()))
-            {
-                foundBook = _bookName;
-            }
-            Assert.IsTrue(foundBook.Text.ToUpper().Contains(bookName.ToUpper()), $"Book is not displayed or the book title is {foundBook.Text} instead of {bookName}");
-
->>>>>>> 2d143fe9a56137021fd918232f38eb466da6c2ef
             return this;
         }
     }
