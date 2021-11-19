@@ -55,6 +55,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="baig page\ParduotuvePegasasPegasoKolekcijosKnygosPage.cs" />
+    <Compile Include="baig page\ParduotuvePegasasCustomerInfoPage.cs" />
+    <Compile Include="Drivers\Browsers.cs" />
+    <Compile Include="Drivers\CustomDriver.cs" />
+    <Compile Include="baig page\ParduotuvePegasasHomePage.cs" />
+    <Compile Include="page\BasePage.cs" />
+    <Compile Include="page\CheckBoxDemoPage.cs" />
+    <Compile Include="page\ND3SeleniumCheckBoxPage.cs" />
+    <Compile Include="page\ND4SelectDropDownDemoPage.cs" />
+    <Compile Include="baig page\ParduotuvePegasasLogInPage.cs" />
+    <Compile Include="page\SelectDropDownDemoPage.cs" />
+    <Compile Include="page\SeleniumInputPage.cs" />
+    <Compile Include="page\VartuTechnikaPage.cs" />
+    <Compile Include="baig test\ParduotuvePegasasTest.cs" />
+    <Compile Include="test\BaseTest.cs" />
+    <Compile Include="test\ND3SeleniumCheckBoxTest.cs" />
+    <Compile Include="test\ND4SelectDropDownDemoTest.cs" />
+    <Compile Include="test\SelectDropDownDemoTest.cs" />
+    <Compile Include="test\SeleniumInputTest.cs" />
+    <Compile Include="test\VartuTechnikaTest.cs" />
+    <Compile Include="Tools\MyScreenShot.cs" />
     <Compile Include="VartuTechnika.cs" />
     <Compile Include="ND1.cs" />
     <Compile Include="TestWebDriver.cs" />
@@ -64,6 +85,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
