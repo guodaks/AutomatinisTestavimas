@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using automatinis_testavimas.test;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
@@ -10,24 +11,11 @@ using System.Threading.Tasks;
 
 namespace automatinis_testavimas
 {
-    class VartuTechnika
+    public class VartuTechnika : BaseTest
     {
         private static IWebDriver _driver;
 
-        [OneTimeSetUp]
-        public static void SetUp()
-        {
-            _driver = new ChromeDriver();
-            _driver.Url = "http://vartutechnika.lt/";
-            WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
-            _driver.FindElement(By.Id("cookiescript_reject"));
-        }
 
-        [OneTimeTearDown]
-        public static void TearDown()
-        {
-            // _driver.Quit();
-        }
 
         [TestCase("2000", "2000", true, false, "665.69$", TestName = "2000 x 2000 + vartu automatika = 665.69$")]
         //true - pazymeta varnele, false - nepazymeta
