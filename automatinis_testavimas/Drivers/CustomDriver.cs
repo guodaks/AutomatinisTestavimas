@@ -36,6 +36,10 @@ namespace automatinis_testavimas.Drivers
             }
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             driver.Manage().Window.Maximize();
+<<<<<<< HEAD
+=======
+
+>>>>>>> abc0a3b90db8f6eff7b6a88b209798dab2a8a554
             return driver;
 
         }
