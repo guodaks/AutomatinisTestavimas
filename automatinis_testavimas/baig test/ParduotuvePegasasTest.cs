@@ -17,10 +17,7 @@ namespace automatinis_testavimas.test
         public void TestLogInWithNonExistingAccount()
         {
             _pegasasHomePage.NavigateToDefaultPage()
-<<<<<<< HEAD
                 .ClickAtsijungti()
-=======
->>>>>>> abc0a3b90db8f6eff7b6a88b209798dab2a8a554
                 .ClickPrisijungti();
             string email = "ghdkslshj@gmail.com";
             string password = "djskafjdjs";
@@ -29,25 +26,18 @@ namespace automatinis_testavimas.test
                 .LogInButtonClick()
                 .VerifyIncorrectLoginErrorMessageDisplayed();
         }
-<<<<<<< HEAD
+        
         [TestCase("Šekspyras", "Sonetai", TestName = "Search for Šekspyras \"Sonetai\" in searchbar")]
         [TestCase("Stephen King", "Svetimas", TestName = "Search for \"Stephen King Svetimas\" in searchbar")]
         [TestCase("Vincas Mykolaitis-Putinas", "Altorių šešėly", TestName = "Search for Vincas Mykolaitis-Putinas \"Altorių šešėly\" in searchbar")]
         public void TestFindSpecificBookUsingSearchBar(string author, string bookName)
         {
-=======
-        [Test]
-        public void TestFindSpecificBookUsingSearchBar()
-        {
-            string author = "Šekspyras";
-            string bookName = "Sonetai";
->>>>>>> abc0a3b90db8f6eff7b6a88b209798dab2a8a554
             _pegasasHomePage.NavigateToDefaultPage()
                 .WriteInSearchBox(author, bookName)
                 .ClickEnterInSearchBox()
                 .VerifyThatSearchedItemIsDisplayed(author, bookName);
         }
-<<<<<<< HEAD
+
         [TestCase("Sofi pasirinkimas", TestName = "Search for \"Sofi pasirinkimas\" in Pegaso kolekcijos knygos")]
         [TestCase("Kvepalai", TestName = "Search for \"Kvepalai\" in Pegaso kolekcijos knygos")]
         [TestCase("Martinas Idenas", TestName = "Search for \"Martinas Idenas\" in Pegaso kolekcijos knygos")]
@@ -82,15 +72,5 @@ namespace automatinis_testavimas.test
             _pegasasPegasoShoppingCartPage.RemoveItemFromShoppingCart()
                 .VerifyThatItemIsRemovedFromShoppingCart();
         }
-=======
-        [Test]
-        public void TestFindBookInPegasoKolekcijosSection()
-        {
-            string bookName = "Sofi pasirinkimas";
-
-            _pegasasPegasoKolekcijosKnygosPage.NavigateToDefaultPage()
-                .VerifyBookIsDisplayed(bookName);
-        }
->>>>>>> abc0a3b90db8f6eff7b6a88b209798dab2a8a554
     }
 }
