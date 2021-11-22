@@ -13,22 +13,17 @@ namespace automatinis_testavimas.page
    public class ParduotuvePegasasHomePage : BasePage
     {
         private const string PageAddress = "https://www.pegasas.lt/";
-<<<<<<< HEAD
         private IWebElement _prisijungtiToggleButton => Driver.FindElement(By.CssSelector(".content-wrapper > .customer-icon"));
         private IWebElement _prisijungtiButton => Driver.FindElement(By.Id("sign-in"));
         private IWebElement _paskyraToggleButton => Driver.FindElement(By.CssSelector(".content-wrapper > .customer-icon"));
-=======
-        //private const string ResultText = "";
         private IWebElement _prisijungtiToggleButton => Driver.FindElement(By.CssSelector(".guest-text"));
         private IWebElement _prisijungtiButton => Driver.FindElement(By.Id("sign-in"));
         private IWebElement _paskyraToggleButton => Driver.FindElement(By.CssSelector(".customer-name"));
->>>>>>> abc0a3b90db8f6eff7b6a88b209798dab2a8a554
         private IWebElement _jusuPaskyraButton => Driver.FindElement(By.CssSelector(".item-content"));
         private IWebElement _userInfo => Driver.FindElement(By.CssSelector(".box-content"));
         private IWebElement _searchBar => Driver.FindElement(By.Id("search"));
         private IWebElement _authorDisplayed => Driver.FindElement(By.CssSelector(".product-item-author.ellipsis"));
         private IWebElement _itemNameDisplayed => Driver.FindElement(By.CssSelector(".product-item-link"));
-<<<<<<< HEAD
         private IWebElement _imageButtons => Driver.FindElement(By.CssSelector(".lazyloaded"));
         private IWebElement _popUp => Driver.FindElement(By.CssSelector(".soundest-form-background-image-close "));
         private IWebElement _popUp2 => Driver.FindElement(By.CssSelector(".soundest-form-simple-close "));
@@ -67,13 +62,13 @@ namespace automatinis_testavimas.page
                 _popUp2.Click();
             }
             return this;
-=======
+
         private IWebElement _pegasoKolekcijosKnygosButton => Driver.FindElement(By.CssSelector(".lazyloaded"));
 
         public ParduotuvePegasasHomePage(IWebDriver webdriver) : base(webdriver)
         {
             Driver.Url = PageAddress;
->>>>>>> abc0a3b90db8f6eff7b6a88b209798dab2a8a554
+
         }
         public ParduotuvePegasasHomePage NavigateToDefaultPage()
         {
@@ -83,15 +78,15 @@ namespace automatinis_testavimas.page
             }
             return this;
         }
-<<<<<<< HEAD
+
         public ParduotuvePegasasHomePage ClickAtsijungti()
         { 
             _paskyraToggleButton.Click();
             _atsijungtiButton.Click();
             return this;
         }
-=======
->>>>>>> abc0a3b90db8f6eff7b6a88b209798dab2a8a554
+
+
         public ParduotuvePegasasHomePage ClickPrisijungti()
         {
             _prisijungtiToggleButton.Click();            
@@ -123,7 +118,7 @@ namespace automatinis_testavimas.page
         }
         public ParduotuvePegasasHomePage ClickPegasoKolekcijosKnygosButton()
         {
-<<<<<<< HEAD
+
             if(_imageButtons.GetAttribute("title").Contains("Pegaso kolekcijos"))
             {
                 _imageButtons.Click();
@@ -140,9 +135,6 @@ namespace automatinis_testavimas.page
         {
             _pirkiniuKrepsButton.Click();
             _perziuretiKrepsButton.Click();
-=======
-            _pegasoKolekcijosKnygosButton.Click();
->>>>>>> abc0a3b90db8f6eff7b6a88b209798dab2a8a554
             return this;
         }
     }
