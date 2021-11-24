@@ -27,7 +27,7 @@ namespace automatinis_testavimas.test
         [OneTimeSetUp]
         public static void SetUp()
         {
-            IWebDriver driver = CustomDriver.GetChromeDriver();
+            driver = CustomDriver.GetChromeDriver();
             _dropDownPage = new SelectDropDownDemoPage(driver);
             _pegasasHomePage = new ParduotuvePegasasHomePage(driver);
             _pegasasLogInPage = new ParduotuvePegasasLogInPage(driver);
@@ -40,11 +40,10 @@ namespace automatinis_testavimas.test
             string password = "Ona.onute123";
             _pegasasHomePage.NavigateToDefaultPage()
                 .AcceptCookie()
-                //.PopUp1Close()
                 .ClickPrisijungti();
             _pegasasLogInPage.LogInInfoInput(email, password)
                 .LogInButtonClick();
-            //_pegasasHomePage.PopUp2Close();
+            _pegasasHomePage.PopUpClose();
         }
 
         [TearDown]
@@ -59,7 +58,7 @@ namespace automatinis_testavimas.test
         [OneTimeTearDown]
         public static void TearDown()
         {
-            driver.Quit(); //kad nebepriklausytu nuo puslapio (ne _page.Close...)
+            driver.Close(); //kad nebepriklausytu nuo puslapio (ne _page.Close...)
         }
 
     }

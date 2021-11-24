@@ -53,13 +53,7 @@ namespace automatinis_testavimas.baig_page
         }
         public ParduotuvePegasasShoppingCartPage RemoveItemFromShoppingCart()
         {
-            foreach (IWebElement item in _itemName)
-            {
-                Actions action = new Actions(Driver);
-                action.MoveToElement(item);
-                action.Perform();
-                _removeItemButton.Click();
-            }
+            _removeItemButton.Click();
             return this;
         }
         public ParduotuvePegasasShoppingCartPage VerifyThatItemIsRemovedFromShoppingCart()

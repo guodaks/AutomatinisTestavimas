@@ -9,8 +9,8 @@
     <ProjectGuid>{A479F9AD-4E3C-4D4C-A910-C48E53CD0D77}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>automatinis_testavimas</RootNamespace>
-    <AssemblyName>automatinis_testavimas</AssemblyName>
+    <RootNamespace>automatinistestavimas</RootNamespace>
+    <AssemblyName>automatinistestavimas</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -38,6 +38,7 @@
     <Reference Include="nunit.framework, Version=3.13.2.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.13.2\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -55,7 +56,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="baig page\ParduotuvePegasasKuprinesSectionPage.cs" />
     <Compile Include="baig page\ParduotuvePegasasPegasoKolekcijosKnygosPage.cs" />
     <Compile Include="baig page\ParduotuvePegasasShoppingCartPage.cs" />
@@ -63,14 +63,6 @@
     <Compile Include="Drivers\CustomDriver.cs" />
     <Compile Include="baig page\ParduotuvePegasasHomePage.cs" />
     <Compile Include="baig page\BasePage.cs" />
-=======
-    <Compile Include="baig page\ParduotuvePegasasPegasoKolekcijosKnygosPage.cs" />
-    <Compile Include="baig page\ParduotuvePegasasCustomerInfoPage.cs" />
-    <Compile Include="Drivers\Browsers.cs" />
-    <Compile Include="Drivers\CustomDriver.cs" />
-    <Compile Include="baig page\ParduotuvePegasasHomePage.cs" />
-    <Compile Include="page\BasePage.cs" />
->>>>>>> abc0a3b90db8f6eff7b6a88b209798dab2a8a554
     <Compile Include="page\CheckBoxDemoPage.cs" />
     <Compile Include="page\ND3SeleniumCheckBoxPage.cs" />
     <Compile Include="page\ND4SelectDropDownDemoPage.cs" />
@@ -79,11 +71,7 @@
     <Compile Include="page\SeleniumInputPage.cs" />
     <Compile Include="page\VartuTechnikaPage.cs" />
     <Compile Include="baig test\ParduotuvePegasasTest.cs" />
-<<<<<<< HEAD
     <Compile Include="baig test\BaseTest.cs" />
-=======
-    <Compile Include="test\BaseTest.cs" />
->>>>>>> abc0a3b90db8f6eff7b6a88b209798dab2a8a554
     <Compile Include="test\ND3SeleniumCheckBoxTest.cs" />
     <Compile Include="test\ND4SelectDropDownDemoTest.cs" />
     <Compile Include="test\SelectDropDownDemoTest.cs" />

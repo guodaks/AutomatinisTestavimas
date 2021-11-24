@@ -11,7 +11,7 @@ namespace automatinis_testavimas.page
     public class ParduotuvePegasasLogInPage : BasePage
     {
         private const string PageAddress = "https://www.pegasas.lt/customer/account/login/referer/aHR0cHM6Ly93d3cucGVnYXNhcy5sdC8=";
-        //private const string ResultText = "";
+        private const string errorMessage = "Prisijungimo duomenys neteisingi";
         private IWebElement _emailInputField => Driver.FindElement(By.Id("email"));
         private IWebElement _passwordInputField => Driver.FindElement(By.Id("pass"));
         private IWebElement _loginButton => Driver.FindElement(By.Id("send2"));
@@ -19,7 +19,6 @@ namespace automatinis_testavimas.page
 
         public ParduotuvePegasasLogInPage(IWebDriver webdriver) : base(webdriver)
         {
-            Driver.Url = PageAddress;
         }
         public ParduotuvePegasasLogInPage NavigateToDefaultPage()
         {
@@ -44,7 +43,6 @@ namespace automatinis_testavimas.page
         }
         public ParduotuvePegasasLogInPage VerifyIncorrectLoginErrorMessageDisplayed()
         {
-            string errorMessage = "Prisijungimo duomenys neteisingi";
             Assert.IsTrue(_incorrectLogInMessageBox.Text.Contains(errorMessage), $"{errorMessage} is not displayed, {_incorrectLogInMessageBox.Text} is displayed instead");
             return this;
         }

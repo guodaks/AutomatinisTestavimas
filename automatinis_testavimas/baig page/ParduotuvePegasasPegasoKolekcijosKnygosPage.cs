@@ -16,8 +16,7 @@ namespace automatinis_testavimas.baig_page
         private const string PageAddress = "https://www.pegasas.lt/pegaso-kolekcijos-knygos.html";
         private IReadOnlyCollection<IWebElement> _bookName => Driver.FindElements(By.CssSelector(".product-item-link"));
         private IWebElement _bookTitle => Driver.FindElement(By.CssSelector(".page-title-wrapper.product"));
-        private IWebElement _popUp2 => Driver.FindElement(By.CssSelector(".soundest-form-simple-close"));
-        private IReadOnlyCollection<IWebElement> _bookName => Driver.FindElements(By.CssSelector(".product-item-name"));
+        private IWebElement _popUp => Driver.FindElement(By.CssSelector(".soundest-form-simple-close"));
         public ParduotuvePegasasPegasoKolekcijosKnygosPage(IWebDriver webdriver) : base(webdriver)
         {       }
         public ParduotuvePegasasPegasoKolekcijosKnygosPage NavigateToDefaultPage()
@@ -28,13 +27,19 @@ namespace automatinis_testavimas.baig_page
             }
             return this;
         }
-        public ParduotuvePegasasPegasoKolekcijosKnygosPage PopUp2Close()
+        public ParduotuvePegasasPegasoKolekcijosKnygosPage PopUpClose()
         {
-            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            if (_popUp2.Displayed)
-            _popUp2.Click();           
+            try
+            {
+                Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+                _popUp.Click();
+            }
+            catch
+            {
+            }
             return this;
         }
+
         public ParduotuvePegasasPegasoKolekcijosKnygosPage FindBook(string bookName)
         {
             {
@@ -59,20 +64,5 @@ namespace automatinis_testavimas.baig_page
             return this;
         }
     
-        public ParduotuvePegasasPegasoKolekcijosKnygosPage VerifyBookIsDisplayed(string bookName)
-        {
-            Actions action = new Actions(Driver);
-
-            foreach (IWebElement book in _bookName)
-            {
-                IWebElement foundBook = null;
-                while (book.Text.ToUpper().Contains(bookName.ToUpper()))
-                {
-                    foundBook = book;
-                }
-                Assert.IsTrue(foundBook.Text.ToUpper().Contains(bookName.ToUpper()), $"Book is not displayed or the book title is {foundBook.Text} instead of {bookName}");
-            }
-            return this;
-        }
     }
 }

@@ -22,10 +22,6 @@ namespace automatinis_testavimas.page
 
         public SelectDropDownDemoPage(IWebDriver webdriver) : base(webdriver)
         {
-<<<<<<< HEAD
-=======
-            Driver.Url = PageAddress;
->>>>>>> abc0a3b90db8f6eff7b6a88b209798dab2a8a554
         }
         public SelectDropDownDemoPage SelectFromDropdownByText(string text)
         {

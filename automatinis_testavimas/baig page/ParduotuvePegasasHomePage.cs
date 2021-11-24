@@ -16,19 +16,15 @@ namespace automatinis_testavimas.page
         private IWebElement _prisijungtiToggleButton => Driver.FindElement(By.CssSelector(".content-wrapper > .customer-icon"));
         private IWebElement _prisijungtiButton => Driver.FindElement(By.Id("sign-in"));
         private IWebElement _paskyraToggleButton => Driver.FindElement(By.CssSelector(".content-wrapper > .customer-icon"));
-        private IWebElement _prisijungtiToggleButton => Driver.FindElement(By.CssSelector(".guest-text"));
-        private IWebElement _prisijungtiButton => Driver.FindElement(By.Id("sign-in"));
-        private IWebElement _paskyraToggleButton => Driver.FindElement(By.CssSelector(".customer-name"));
         private IWebElement _jusuPaskyraButton => Driver.FindElement(By.CssSelector(".item-content"));
         private IWebElement _userInfo => Driver.FindElement(By.CssSelector(".box-content"));
         private IWebElement _searchBar => Driver.FindElement(By.Id("search"));
         private IWebElement _authorDisplayed => Driver.FindElement(By.CssSelector(".product-item-author.ellipsis"));
         private IWebElement _itemNameDisplayed => Driver.FindElement(By.CssSelector(".product-item-link"));
         private IWebElement _imageButtons => Driver.FindElement(By.CssSelector(".lazyloaded"));
-        private IWebElement _popUp => Driver.FindElement(By.CssSelector(".soundest-form-background-image-close "));
-        private IWebElement _popUp2 => Driver.FindElement(By.CssSelector(".soundest-form-simple-close "));
+        private IWebElement _popUp => Driver.FindElement(By.CssSelector(".soundest-form-simple-close "));
         private IWebElement _sectionButtons => Driver.FindElement(By.CssSelector(".expandable"));
-        private IWebElement _perziuretiKrepsButton => Driver.FindElement((By.LinkText(".action.primary.viewcart")));
+        private IWebElement _perziuretiKrepsButton => Driver.FindElement((By.CssSelector(".action.primary.viewcart")));
         private IWebElement _pirkiniuKrepsButton => Driver.FindElement(By.CssSelector(".action.showcart"));
         private IWebElement _atsijungtiButton => Driver.FindElement(By.LinkText("Atsijungti"));
 
@@ -45,30 +41,17 @@ namespace automatinis_testavimas.page
             Driver.Navigate().Refresh();
             return this;
         }
-        public ParduotuvePegasasHomePage PopUp1Close()
+        public ParduotuvePegasasHomePage PopUpClose()
         {
-            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            if(_popUp.Displayed)
+            try
             {
+                Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
                 _popUp.Click();
             }
-            return this;
-        }
-        public ParduotuvePegasasHomePage PopUp2Close()
-        {
-            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            if (_popUp2.Displayed)
+            catch
             {
-                _popUp2.Click();
             }
             return this;
-
-        private IWebElement _pegasoKolekcijosKnygosButton => Driver.FindElement(By.CssSelector(".lazyloaded"));
-
-        public ParduotuvePegasasHomePage(IWebDriver webdriver) : base(webdriver)
-        {
-            Driver.Url = PageAddress;
-
         }
         public ParduotuvePegasasHomePage NavigateToDefaultPage()
         {
@@ -78,25 +61,16 @@ namespace automatinis_testavimas.page
             }
             return this;
         }
-
         public ParduotuvePegasasHomePage ClickAtsijungti()
         { 
             _paskyraToggleButton.Click();
             _atsijungtiButton.Click();
             return this;
         }
-
-
         public ParduotuvePegasasHomePage ClickPrisijungti()
         {
             _prisijungtiToggleButton.Click();            
             _prisijungtiButton.Click();
-            return this;
-        }
-        public ParduotuvePegasasHomePage ClickPaskyra()
-        {
-            _paskyraToggleButton.Click();
-            _jusuPaskyraButton.Click();
             return this;
         }
         public ParduotuvePegasasHomePage WriteInSearchBox(string itemAuthor, string itemName)
@@ -118,7 +92,6 @@ namespace automatinis_testavimas.page
         }
         public ParduotuvePegasasHomePage ClickPegasoKolekcijosKnygosButton()
         {
-
             if(_imageButtons.GetAttribute("title").Contains("Pegaso kolekcijos"))
             {
                 _imageButtons.Click();

@@ -12,7 +12,6 @@ namespace automatinis_testavimas.test
 {
     public class ParduotuvePegasasTest : BaseTest
     {
-
         [Test]
         public void TestLogInWithNonExistingAccount()
         {
@@ -26,9 +25,9 @@ namespace automatinis_testavimas.test
                 .LogInButtonClick()
                 .VerifyIncorrectLoginErrorMessageDisplayed();
         }
-        
+
         [TestCase("Šekspyras", "Sonetai", TestName = "Search for Šekspyras \"Sonetai\" in searchbar")]
-        [TestCase("Stephen King", "Svetimas", TestName = "Search for \"Stephen King Svetimas\" in searchbar")]
+        [TestCase("Stephen King", "Svetimas", TestName = "Search for Stephen King \"Svetimas\" in searchbar")]
         [TestCase("Vincas Mykolaitis-Putinas", "Altorių šešėly", TestName = "Search for Vincas Mykolaitis-Putinas \"Altorių šešėly\" in searchbar")]
         public void TestFindSpecificBookUsingSearchBar(string author, string bookName)
         {
@@ -46,26 +45,26 @@ namespace automatinis_testavimas.test
             _pegasasHomePage.NavigateToDefaultPage()
                  .ClickPegasoKolekcijosKnygosButton();
             _pegasasPegasoKolekcijosKnygosPage.NavigateToDefaultPage()
-                .PopUp2Close()
+                .PopUpClose()
                 .FindBook(bookName)
                 .VerifyBookIsDisplayed(bookName);
         }
-        [TestCase("Kuprinė ORGANICE Antitheft, Blue", "9,00", TestName = "Item \"Kuprinė ORGANICE Antitheft, Blue\" and its price \"9,00e\" are displayed.")]
-        [TestCase("Kuprinė Enso DAISY BLUE, 42 cm", "35,99", TestName = "Item \"Kuprinė Enso DAISY BLUE, 42 cm\" and its price \"35,99e\" are displayed.")]
-        [TestCase("Kuprinė Pepe Jeans SCRATCH, 44 cm, Black", "49,99", TestName = "Item \"Kuprinė Pepe Jeans SCRATCH, 44 cm, Blacl\" and its price \"49,99e\" are displayed.")]
+
+        [TestCase("Kuprinė Pepe Jeans SCRATCH, 40 cm, Black", "49,99", TestName = "Item \"Kuprinė Pepe Jeans SCRATCH, 40 cm, Black\" and its price \"49,99e\" are displayed in shopping cart.")]
         public void TestPutItemInShoppingBasket(string itemName, string itemPrice)
         {
             _pegasasHomePage.NavigateToDefaultPage()
                  .NavigateToKuprinesSection();
             _pegasasPegasoKuprinesPage.NavigateToDefaultPage()
-                .PopUp2Close()
+                .PopUpClose()
                 .FindAndAddItemToBasket(itemName)
                 .NavigateToShoppingCart();
             _pegasasPegasoShoppingCartPage.VerifyThatItemIsInTheShoppingCart(itemName)
                 .VerifyThatTheItemPriceIsCorrect(itemPrice);
         }
+
         [Test]
-        public void TestRemoveItemFromBasket()
+        public void TestRemoveItemFromShoppingBasket()
         {
             _pegasasHomePage.NavigateToDefaultPage()
                 .NavigateToShoppingCart();
